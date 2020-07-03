@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/sortPassingGrades.js';
+import {jsQuestion} from './questions/arrangingCoins.js';
 let start = process.hrtime();
 
 jsQuestion();
