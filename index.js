@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/duplicateIntegers.js';
+import {jsQuestion} from './questions/missingIntegers.js';
 let start = process.hrtime();
 
 jsQuestion();
