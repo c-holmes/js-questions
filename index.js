@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/arrangingCoins.js';
+import {jsQuestion} from './questions/duplicateIntegers.js';
 let start = process.hrtime();
 
 jsQuestion();
