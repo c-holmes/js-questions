@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/missingIntegers.js';
+import {jsQuestion} from './questions/largestContigousSum.js';
 let start = process.hrtime();
 
 jsQuestion();
