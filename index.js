@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/largestContigousSum.js';
+import {jsQuestion} from './questions/shuffleDeck.js';
 let start = process.hrtime();
 
 jsQuestion();
