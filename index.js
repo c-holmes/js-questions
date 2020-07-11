@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/shuffleDeck.js';
+import {jsQuestion} from './questions/twoLargest.js';
 let start = process.hrtime();
 
 jsQuestion();
