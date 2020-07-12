@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/reverseWords.js';
+import {jsQuestion} from './questions/reverseString.js';
 let start = process.hrtime();
 
 jsQuestion();
