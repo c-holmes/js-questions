@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/twoLargest.js';
+import {jsQuestion} from './questions/getNLargest.js';
 let start = process.hrtime();
 
 jsQuestion();
