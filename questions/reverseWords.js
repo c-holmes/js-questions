@@ -9,7 +9,7 @@ function reverseWords(sentance) {
   sentance = sentance.replace(/  +/g, ' ');
   const sentanceArr = sentance.split(' ');
 
-  for (let i = sentanceArr.length - 1; i >= 0 ; i--) {
+  for (let i = sentanceArr.length - 1; i >= 0; i--) {
     const space = (i !== sentanceArr.length - 1) ? ' ' : ''; 
     reversedSentance = reversedSentance + space + sentanceArr[i];
   }
@@ -17,8 +17,12 @@ function reverseWords(sentance) {
   return reversedSentance;
 }
 
+function reverseWordsInPlace(sentance) {
+  return sentance.replace(/  +/g).split(' ').reverse().join(' ');
+}
+
 function runAndLogReturn() {
-  console.log(reverseWords("jumped dog the"));
+  console.log(reverseWordsInPlace("jumped dog brown the"));
 }
 
 export {runAndLogReturn as jsQuestion};
