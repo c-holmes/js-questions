@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/reverseWords.js';
+import {jsQuestion} from './questions/removeDuplicateChars.js';
 let start = process.hrtime();
 
 jsQuestion();
