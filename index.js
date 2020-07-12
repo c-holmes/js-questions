@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/removeDuplicateChars.js';
+import {jsQuestion} from './questions/findFirstNonRepeating.js';
 let start = process.hrtime();
 
 jsQuestion();
