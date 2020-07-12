@@ -1,4 +1,4 @@
-import {jsQuestion} from './questions/reverseString.js';
+import {jsQuestion} from './questions/stripWhitespace.js';
 let start = process.hrtime();
 
 jsQuestion();
