@@ -6,28 +6,13 @@
  * @return {Array}
  */ 
 function checkTwice(nums) {
-  const numTracker = {};
-  const result = [];
-
-  for(let i = 0; i < nums.length; i++) {
-    if (numTracker[nums[i]] !== undefined) {
-      numTracker[nums[i]] += 1;
-    } else {
-      numTracker[nums[i]] = 1;
-    }
+  const refObj = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (refObj[nums[i]] !== undefined) {
+      return nums[i];
+    } 
+    refObj[nums[i]] = 1;
   }
-
-  for(const prop in numTracker) {
-    if (numTracker[prop] >= 2) {
-      result.push(prop);
-    }
-  }
-
-  return result;
 }
 
-function runAndLogReturn() {
-  console.log(checkTwice([20,30,100,33,44,20,50,50]));
-}
-
-export {runAndLogReturn as jsQuestion};
+exports.checkTwice = checkTwice;

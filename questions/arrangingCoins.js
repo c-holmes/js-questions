@@ -17,8 +17,4 @@ function arrangingCoins(n) {
   return counter;
 }
 
-function runAndLogReturn() {
-  console.log(arrangingCoins(5)); //2
-}
-
-export {runAndLogReturn as jsQuestion};
+exports.arrangingCoins = arrangingCoins;
