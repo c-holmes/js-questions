@@ -6,7 +6,7 @@ function getLargestContigousSum(nums) {
   let currContiguousSum = nums[0];
   let maxContiguousSum = nums[0];
 
-  for(let i = 0; i < nums.length; i++) {
+  for(let i = 1; i < nums.length; i++) {
     currContiguousSum = Math.max(currContiguousSum + nums[i], nums[i]);
     maxContiguousSum = Math.max(currContiguousSum, maxContiguousSum);
   }

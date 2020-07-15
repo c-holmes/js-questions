@@ -11,25 +11,21 @@ function findMissingGaussSolution(nums) {
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
   }
-  // gauss formula (n * n+1)/2
-  return nums.length * (nums.length + 1) / 2 - sum
+  return (nums.length * (nums.length + 1)) / 2 - sum;
 }
 
 function findMissingObjSolution(nums) {
-  const obj = {}
+  const numTracker = {};
+
   for (let i = 0; i < nums.length; i++) {
-    obj[nums[i]] = nums[i];
+    numTracker[nums[i]] = 1;
   }
-  for (let i = 1; i < nums.length; i++) {
-    if (!obj[i]) {
+  for (let i = 1; i <= nums.length; i++) {
+    if (!numTracker[i]) {
       return i;
     }
   }
 }
 
-function runAndLogReturn() {
-  console.log(findMissingObjSolution([3,2,1,4,0,6]));
-}
-
-export {runAndLogReturn as jsQuestion};
+exports.findMissingObjSolution = findMissingObjSolution;
 
