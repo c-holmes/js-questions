@@ -6,17 +6,12 @@
  */
 function shuffle(cards) {
   for (let i = 0; i < cards.length; i++) {
-    const rand = Math.floor(Math.random() * i);
-    const temp = cards[i];
-    cards[i] = cards[rand];
-    cards[rand] = temp;
+    let randIndex = Math.floor(Math.random() * cards.length);
+    let temp = cards[randIndex];
+    cards[randIndex] = cards[i];
+    cards[i] = temp;
   }
   return cards;
 }
 
-const cards = Array.from(new Array(52), (x,i) => i);
-function runAndLogReturn() {
-  console.log(shuffle(cards));
-}
-
-export {runAndLogReturn as jsQuestion};
+exports.shuffle = shuffle;
