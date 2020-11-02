@@ -1,26 +1,21 @@
 /**
  * Remove duplicate chars from a string
- * input: "AAA BBB" // output "A B"
  * @param {String} string
  * @return {String}
  */
  
-function RemoveDuplicateChars(string) {
-  const stringArr = string.split('');
+function removeDuplicateChars(string) {
+  const stringArr = string.replace(/  +/g, ' ').split('');
   let prevValue = '';
-  let uniqueOutput = '';
-  for (let i = 0; i < stringArr.length; i++) {
+  let uniqueChars = '';
+
+  for(let i = 0; i < stringArr.length; i++) {
     if (stringArr[i] !== prevValue) {
-      uniqueOutput += stringArr[i];
+      uniqueChars += stringArr[i];
     }
     prevValue = stringArr[i];
   }
-
-  return uniqueOutput;
+  return uniqueChars;
 }
 
-function runAndLogReturn() {
-  console.log(RemoveDuplicateChars("AAA  BBB"));
-}
-
-export {runAndLogReturn as jsQuestion};
+exports.removeDuplicateChars = removeDuplicateChars;

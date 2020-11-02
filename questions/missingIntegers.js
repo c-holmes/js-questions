@@ -15,7 +15,7 @@ function findMissingGaussSolution(nums) {
 }
 
 function findMissingObjSolution(nums) {
-  const numTracker = {};
+  const numTracker = Array.from(nums);
 
   for (let i = 0; i < nums.length; i++) {
     numTracker[nums[i]] = 1;

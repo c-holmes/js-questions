@@ -5,24 +5,7 @@
  * @param {String}
  */
 function reverseWords(sentance) {
-  let reversedSentance = '';
-  sentance = sentance.replace(/  +/g, ' ');
-  const sentanceArr = sentance.split(' ');
-
-  for (let i = sentanceArr.length - 1; i >= 0; i--) {
-    const space = (i !== sentanceArr.length - 1) ? ' ' : ''; 
-    reversedSentance = reversedSentance + space + sentanceArr[i];
-  }
-
-  return reversedSentance;
+  return sentance.replace(/  +/g, ' ').split(' ').reverse().join(' ');
 }
 
-function reverseWordsInPlace(sentance) {
-  return sentance.replace(/  +/g).split(' ').reverse().join(' ');
-}
-
-function runAndLogReturn() {
-  console.log(reverseWordsInPlace("jumped dog brown the"));
-}
-
-export {runAndLogReturn as jsQuestion};
+exports.reverseWords = reverseWords;
